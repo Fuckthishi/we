@@ -4,8 +4,8 @@
   .modal-layout{display:flex;flex-direction:column;height:auto;min-height:100%;overflow:visible}
   .gallery{order:1;display:grid;grid-template-rows:minmax(390px,56dvh) 72px;min-height:462px;flex:none}
   .modal-details{order:2;padding:20px 18px 34px;overflow:visible;overscroll-behavior:auto;display:flex;flex-direction:column}
-  .modal-details>.size-block:first-of-type{order:1;margin:0;padding:14px 0 18px;border-bottom:1px solid var(--line)}
-  .modal-details>.size-block:nth-of-type(2){order:2;margin:0;padding:18px 0;border-bottom:1px solid var(--line)}
+  .modal-details>.color-section{order:1!important;margin:0;padding:14px 0 18px;border-bottom:1px solid var(--line)}
+  .modal-details>.size-section{order:2!important;margin:0;padding:18px 0;border-bottom:1px solid var(--line)}
   .modal-details>.eyebrow{order:3;margin-top:22px}
   .modal-details>h2{order:4}
   .modal-details>.modal-price{order:5}
