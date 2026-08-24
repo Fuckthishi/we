@@ -1,0 +1,42 @@
+name: Extract white variant photos
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: ${{ !contains(github.event.head_commit.message, '[extract-photoroom]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract Photoroom archive
+        shell: bash
+        run: |
+          set -e
+          ZIP='assets/products/Photoroom.zip'
+          [ -f "$ZIP" ] || exit 0
+          rm -rf assets/products/white-variant
+          mkdir -p assets/products/white-variant
+          unzip -j -o "$ZIP" -d assets/products/white-variant
+          find assets/products/white-variant -type f ! \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) -delete
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path('assets/products/white-variant')
+          files=sorted(p.as_posix() for p in root.iterdir() if p.is_file() and p.suffix.lower() in {'.jpg','.jpeg','.png','.webp'})
+          Path('white-gallery.js').write_text('window.WHITE_GALLERY='+json.dumps(files,separators=(',',':'))+';\n',encoding='utf-8')
+          print('white images:', len(files))
+          PY
+      - name: Commit extracted gallery
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/products/white-variant white-gallery.js
+          git diff --cached --quiet && exit 0
+          git commit -m 'Extract white variant gallery [extract-photoroom]'
+          git push
