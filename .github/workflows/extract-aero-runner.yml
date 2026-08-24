@@ -1,0 +1,51 @@
+name: Extract Aero Runner variants
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: ${{ !contains(github.event.head_commit.message, '[extract-aero]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract variant archives
+        shell: bash
+        run: |
+          set -e
+          rm -rf assets/products/aero-runner
+          mkdir -p assets/products/aero-runner/black-white assets/products/aero-runner/blue-white assets/products/aero-runner/white-black
+          unzip -j -o 'assets/products/black white.zip' -d assets/products/aero-runner/black-white
+          unzip -j -o 'assets/products/white blue.zip' -d assets/products/aero-runner/blue-white
+          unzip -j -o 'assets/products/white blac.zip' -d assets/products/aero-runner/white-black
+          find assets/products/aero-runner -type f ! \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) -delete
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          base=Path('assets/products/aero-runner')
+          mapping={
+            'Black / White':'black-white',
+            'Blue / White':'blue-white',
+            'White / Black':'white-black',
+          }
+          out={}
+          for label,folder in mapping.items():
+              root=base/folder
+              files=sorted(p.as_posix() for p in root.iterdir() if p.is_file() and p.suffix.lower() in {'.jpg','.jpeg','.png','.webp'})
+              out[label]=files
+              print(label, len(files))
+          Path('air-gallery.js').write_text('window.AIR_GALLERIES='+json.dumps(out,separators=(',',':'))+';\n',encoding='utf-8')
+          PY
+      - name: Commit extracted galleries
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/products/aero-runner air-gallery.js
+          git diff --cached --quiet && exit 0
+          git commit -m 'Extract Aero Runner galleries [extract-aero]'
+          git push
