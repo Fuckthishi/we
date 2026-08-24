@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0b0b0c" />
   <title>Sharif Store — Premium Footwear Lebanon</title>
   <meta name="description" content="Sharif Store — curated sneakers and footwear delivered across Lebanon." />
@@ -15,57 +15,24 @@
   <div class="announcement">DELIVERY ACROSS LEBANON · ORDER DIRECTLY ON WHATSAPP</div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Sharif Store home"><span>SHARIF</span><b>STORE</b></a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#shop">Shop</a><a href="#new">New Drops</a><a href="#about">About</a>
-    </nav>
-    <div class="header-actions">
-      <button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button>
-      <button id="cartBtn" class="cart-btn">Bag <span id="cartCount">0</span></button>
-    </div>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#new">New Drops</a><a href="#about">About</a></nav>
+    <div class="header-actions"><button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button><button id="cartBtn" class="cart-btn">Bag <span id="cartCount">0</span></button></div>
   </header>
-
   <main id="top">
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">SHARIF STORE · LEBANON</p>
-        <h1>Clean pairs.<br><em>Zero noise.</em></h1>
-        <p class="hero-text">Premium everyday footwear, selected for comfort, shape and street-ready style.</p>
-        <a class="primary-btn" href="#shop">Shop the first drop <span>↗</span></a>
-      </div>
+      <div class="hero-copy"><p class="eyebrow">SHARIF STORE · LEBANON</p><h1>Clean pairs.<br><em>Zero noise.</em></h1><p class="hero-text">Premium everyday footwear, selected for comfort, shape and street-ready style.</p><a class="primary-btn" href="#shop">Shop the first drop <span>↗</span></a></div>
       <div class="hero-art" id="heroArt"><div class="hero-label">NEW BALANCE DROP · 01</div><img id="heroImage" alt="Featured sneaker" /></div>
     </section>
-
-    <section class="trust-strip">
-      <div><b>01</b><span>Fast local delivery</span></div><div><b>02</b><span>WhatsApp ordering</span></div><div><b>03</b><span>Multiple product photos</span></div><div><b>04</b><span>Sizes 39–44</span></div>
-    </section>
-
-    <section id="shop" class="catalog-section">
-      <div class="section-head"><div><p class="eyebrow">CURRENT DROP</p><h2>Shop sneakers</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="new">New</button><button class="filter" data-filter="sale">Sale</button></div></div>
-      <div id="products" class="product-grid" aria-live="polite"></div>
-    </section>
-
-    <section id="new" class="feature-band">
-      <div><p class="eyebrow">THE SHARIF STANDARD</p><h2>Built around the pair.</h2></div>
-      <p>Swipe galleries, clear variants, fast checkout on WhatsApp and no clutter between you and the product.</p>
-    </section>
-
-    <section id="about" class="about-section">
-      <p class="eyebrow">ABOUT</p><h2>Footwear for Lebanon,<br>without the department-store feeling.</h2>
-      <p>Sharif Store is a focused sneaker storefront with local ordering and delivery. Ask for availability, size and delivery cost in one tap.</p>
-    </section>
+    <section class="trust-strip"><div><b>01</b><span>Fast local delivery</span></div><div><b>02</b><span>WhatsApp ordering</span></div><div><b>03</b><span>28 real product photos</span></div><div><b>04</b><span>Sizes 37–41</span></div></section>
+    <section id="shop" class="catalog-section"><div class="section-head"><div><p class="eyebrow">CURRENT DROP</p><h2>Shop sneakers</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="new">New</button><button class="filter" data-filter="sale">Sale</button></div></div><div id="products" class="product-grid" aria-live="polite"></div></section>
+    <section id="new" class="feature-band"><div><p class="eyebrow">THE SHARIF STANDARD</p><h2>Built around the pair.</h2></div><p>Swipe every angle, choose your size clearly, then send the complete order to WhatsApp without clutter.</p></section>
+    <section id="about" class="about-section"><p class="eyebrow">ABOUT</p><h2>Footwear for Lebanon,<br>without the department-store feeling.</h2><p>Sharif Store is a focused sneaker storefront with local ordering and delivery. Ask for availability, size and delivery cost in one tap.</p></section>
   </main>
-
   <footer><div class="brand footer-brand"><span>SHARIF</span><b>STORE</b></div><div><p>Lebanon</p><a id="footerWhatsApp" href="#">WhatsApp</a></div><div><p>Store</p><a href="#shop">Shop</a><a href="#new">New Drops</a></div></footer>
-
-  <aside id="cartDrawer" class="drawer" aria-hidden="true">
-    <div class="drawer-head"><h3>Your bag</h3><button id="closeCart" class="icon-btn">×</button></div><div id="cartItems" class="cart-items"></div><div class="drawer-foot"><button id="checkoutBtn" class="primary-btn full">Order on WhatsApp <span>↗</span></button></div>
-  </aside>
-  <div id="backdrop" class="backdrop"></div>
-
-  <dialog id="productModal" class="product-modal"><button id="modalClose" class="modal-close">×</button><div id="modalContent"></div></dialog>
-  <dialog id="searchModal" class="search-modal"><button id="searchClose" class="modal-close">×</button><h3>Find a pair</h3><input id="searchInput" autofocus placeholder="Search products…" /><div id="searchResults" class="search-results"></div></dialog>
-
+  <aside id="cartDrawer" class="drawer" aria-hidden="true"><div class="drawer-head"><h3>Your bag</h3><button id="closeCart" class="icon-btn" aria-label="Close bag">×</button></div><div id="cartItems" class="cart-items"></div><div class="drawer-foot"><button id="checkoutBtn" class="primary-btn full">Order on WhatsApp <span>↗</span></button></div></aside><div id="backdrop" class="backdrop"></div>
+  <dialog id="productModal" class="product-modal"><button id="modalClose" class="modal-close" aria-label="Close product">×</button><div id="modalContent"></div></dialog>
+  <dialog id="searchModal" class="search-modal"><button id="searchClose" class="modal-close" aria-label="Close search">×</button><h3>Find a pair</h3><input id="searchInput" autocomplete="off" placeholder="Search products…" aria-label="Search products" /><div id="searchResults" class="search-results"></div></dialog>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="app.js"></script>
+  <script src="imgpart1.js"></script><script src="imgpart2.js"></script><script src="imgpart3.js"></script><script src="imgpart4.js"></script><script src="app.js"></script>
 </body>
 </html>
