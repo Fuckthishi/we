@@ -1,0 +1,96 @@
+name: Optimize product images
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    if: ${{ !contains(github.event.head_commit.message, '[optimize-images]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - name: Build lightweight galleries
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          import json
+
+          src_root=Path('assets/products')
+          out_root=src_root/'fast'
+          out_root.mkdir(parents=True,exist_ok=True)
+          exts={'.jpg','.jpeg','.png','.webp'}
+
+          def convert(src:Path):
+              rel=src.relative_to(src_root)
+              dst=(out_root/rel).with_suffix('.webp')
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              try:
+                  im=Image.open(src)
+                  im=ImageOps.exif_transpose(im)
+                  if im.mode not in ('RGB','RGBA'):
+                      im=im.convert('RGBA' if 'A' in im.getbands() else 'RGB')
+                  im.thumbnail((1400,1400),Image.Resampling.LANCZOS)
+                  im.save(dst,'WEBP',quality=82,method=6)
+                  return dst.as_posix()
+              except Exception as e:
+                  print('skip',src,e)
+                  return src.as_posix()
+
+          # Generate WebP versions for extracted galleries.
+          white=[]
+          root=src_root/'white-variant'
+          if root.exists():
+              for p in sorted(root.iterdir()):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      white.append(convert(p))
+          if white:
+              Path('white-gallery.js').write_text('window.WHITE_GALLERY='+json.dumps(white,separators=(',',':'))+';\n',encoding='utf-8')
+
+          aero={}
+          mapping={'Black / White':'black-white','Blue / White':'blue-white','White / Black':'white-black'}
+          for label,folder in mapping.items():
+              vals=[]; root=src_root/'aero-runner'/folder
+              if root.exists():
+                  for p in sorted(root.iterdir()):
+                      if p.is_file() and p.suffix.lower() in exts:
+                          vals.append(convert(p))
+              aero[label]=vals
+          if any(aero.values()):
+              Path('air-gallery.js').write_text('window.AIR_GALLERIES='+json.dumps(aero,separators=(',',':'))+';\n',encoding='utf-8')
+
+          # Also shrink the hardcoded 530 images in place without changing filenames.
+          roots=['IMG_0441.jpg','IMG_0447.png','IMG_0448.png','IMG_0450.png','IMG_0451.png']
+          for name in roots:
+              p=src_root/name
+              if not p.exists(): continue
+              try:
+                  im=Image.open(p); im=ImageOps.exif_transpose(im)
+                  im.thumbnail((1400,1400),Image.Resampling.LANCZOS)
+                  if p.suffix.lower() in ('.jpg','.jpeg'):
+                      if im.mode!='RGB': im=im.convert('RGB')
+                      im.save(p,'JPEG',quality=84,optimize=True,progressive=True)
+                  else:
+                      im.save(p,'PNG',optimize=True,compress_level=9)
+              except Exception as e:
+                  print('skip root',p,e)
+          PY
+      - name: Commit optimized assets
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/products/fast assets/products/IMG_0441.jpg assets/products/IMG_0447.png assets/products/IMG_0448.png assets/products/IMG_0450.png assets/products/IMG_0451.png white-gallery.js air-gallery.js
+          git diff --cached --quiet && exit 0
+          git commit -m 'Optimize product images [optimize-images]'
+          git push
