@@ -1,7 +1,15 @@
 const WHATSAPP='96171546495';
 const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
-const embedded=[...(window.SHARIF_IMAGE_PART1||[]),...(window.SHARIF_IMAGE_PART2||[]),...(window.SHARIF_IMAGE_PART3||[]),...(window.SHARIF_IMAGE_PART4||[])];
-const product={id:'nb-black-white',name:'New Balance Black / White',brand:'New Balance',category:'Sneakers',price:0,new_drop:true,sold_out:false,sizes:['37','38','39','40','41'],description:'Black and white everyday sneaker with a chunky sole and breathable upper.',gallery:embedded.slice(0,7)};
+const gallery=[
+  'assets/products/IMG_0441.jpg',
+  'assets/products/IMG_0443.jpg',
+  'assets/products/IMG_0444.jpg',
+  'assets/products/IMG_0447.png',
+  'assets/products/IMG_0448.png',
+  'assets/products/IMG_0450.png',
+  'assets/products/IMG_0451.png'
+];
+const product={id:'nb-black-white',name:'New Balance Black / White',brand:'New Balance',category:'Sneakers',price:0,new_drop:true,sold_out:false,sizes:['37','38','39','40','41'],description:'Black and white everyday sneaker with a chunky sole and breathable upper.',gallery};
 function readCart(){try{const v=JSON.parse(localStorage.getItem('sharif-cart')||'[]');return Array.isArray(v)?v:[]}catch{return[]}}
 const state={products:[product],cart:readCart(),filter:'all'};
 function safeText(v=''){return String(v).replace(/[&<>'\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[c]))}
