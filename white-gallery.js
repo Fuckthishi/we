@@ -1,1 +1,1 @@
-window.WHITE_GALLERY=['assets/products/IMG_0452.png','assets/products/IMG_0453.png'];
+window.WHITE_GALLERY=["assets/products/white-variant/IMG_0427.jpg","assets/products/white-variant/IMG_0428.jpg","assets/products/white-variant/IMG_0430.png","assets/products/white-variant/IMG_0432.png","assets/products/white-variant/IMG_0433.png"];
