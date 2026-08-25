@@ -23,6 +23,7 @@ jobs:
           unzip -j -o 'assets/products/white blue.zip' -d assets/products/aero-runner/blue-white
           unzip -j -o 'assets/products/white blac.zip' -d assets/products/aero-runner/white-black
           find assets/products/aero-runner -type f ! \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) -delete
+          rm -f assets/products/aero-runner/black-white/IMG_0456.* assets/products/aero-runner/black-white/IMG_0457.*
           python3 - <<'PY'
           from pathlib import Path
           import json
