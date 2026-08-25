@@ -1,0 +1,1 @@
+(()=>{const img=document.getElementById('heroImage');if(!img)return;const aero=window.AIR_GALLERIES?.['Black / White'];const src=Array.isArray(aero)&&aero.length?aero[0]:'assets/products/IMG_0441.jpg';img.src=src;img.alt='Black and white cushioned sneaker from Sharif Store';img.fetchPriority='high';img.decoding='async';img.classList.add('ready');})();
