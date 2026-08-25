@@ -47,7 +47,6 @@ jobs:
                   print('skip',src,e)
                   return src.as_posix()
 
-          # Generate WebP versions for extracted galleries.
           white=[]
           root=src_root/'white-variant'
           if root.exists():
@@ -59,17 +58,19 @@ jobs:
 
           aero={}
           mapping={'Black / White':'black-white','Blue / White':'blue-white','White / Black':'white-black'}
+          removed={'black-white':{'IMG_0456','IMG_0457'}}
           for label,folder in mapping.items():
               vals=[]; root=src_root/'aero-runner'/folder
               if root.exists():
                   for p in sorted(root.iterdir()):
+                      if p.stem in removed.get(folder,set()):
+                          continue
                       if p.is_file() and p.suffix.lower() in exts:
                           vals.append(convert(p))
               aero[label]=vals
           if any(aero.values()):
               Path('air-gallery.js').write_text('window.AIR_GALLERIES='+json.dumps(aero,separators=(',',':'))+';\n',encoding='utf-8')
 
-          # Also shrink the hardcoded 530 images in place without changing filenames.
           roots=['IMG_0441.jpg','IMG_0447.png','IMG_0448.png','IMG_0450.png','IMG_0451.png']
           for name in roots:
               p=src_root/name
