@@ -1,6 +1,25 @@
 const WHATSAPP='96171546495';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 
+function removeNetlifyBadge(){
+  const selectors=[
+    '[data-netlify-badge]',
+    '[data-netlify-ui]',
+    '.netlify-badge',
+    '.netlify-drawer',
+    'iframe[src*="netlify.com"][title*="Netlify" i]',
+    'iframe[src*="netlify.app"][title*="Netlify" i]'
+  ];
+  selectors.forEach(s=>document.querySelectorAll(s).forEach(el=>el.remove()));
+  document.querySelectorAll('a,button,div,span').forEach(el=>{
+    const text=(el.textContent||'').trim().toLowerCase();
+    if(text==='powered by netlify' || text.startsWith('powered by netlify')){
+      const host=el.closest('a,button,[role="button"],div')||el;
+      host.remove();
+    }
+  });
+}
+
 const fallback530={
   'Black / White':['assets/products/IMG_0441.jpg','assets/products/IMG_0447.png','assets/products/IMG_0448.png','assets/products/IMG_0450.png','assets/products/IMG_0451.png'],
   'White':Array.isArray(window.WHITE_GALLERY)&&window.WHITE_GALLERY.length?window.WHITE_GALLERY:['assets/products/IMG_0452.png','assets/products/IMG_0453.png']
@@ -50,7 +69,7 @@ function openProduct(p){
 
   $$('.color-btn').forEach(btn=>btn.addEventListener('click',()=>{color=btn.dataset.color;imgs=variants[color];index=0;$$('.color-btn').forEach(x=>x.classList.toggle('active',x===btn));$('#colorHint').textContent=color;renderGallery();warmProduct(p)}));
   $$('.size-choice').forEach(btn=>btn.addEventListener('click',()=>{selectedSize=btn.dataset.size;$$('.size-choice').forEach(x=>x.classList.toggle('active',x===btn));$('#sizeHint').textContent=`Size ${selectedSize} selected`;$('#sizeHint').classList.remove('error-text')}));
-  $('#addToBag').addEventListener('click',()=>{if(!selectedSize){$('#sizeHint').textContent='Choose a size first';$('#sizeHint').classList.add('error-text');return}const existing=state.cart.find(x=>x.id===p.id&&x.size===selectedSize&&x.color===color);if(existing)existing.qty=Math.min(9,(existing.qty||1)+1);else state.cart.push({id:p.id,size:selectedSize,color,qty:1});saveCart();animateClose(modal);setTimeout(openCart,200)});
+  $('#addToBag').addEventListener('click',()=>{if(!selectedSize){$('#sizeHint').textContent='Choose a size first';$('#sizeHint').classList.add('error-text');return}const existing=state.cart.find(x=>x.id===p.id&&x.size===selectedSize&&x.color===color);if(existing)existing.qty=Math.min(9,(existing.qty||1)+1);else state.cart.push({id:p.id,size:selectedSize,color,qty:1});saveCart();const btn=$('#addToBag');btn.innerHTML='Added to bag <span>✓</span>';btn.disabled=true;setTimeout(()=>{if(btn){btn.innerHTML='Add to bag <span>+</span>';btn.disabled=false}},900)});
   $('#directWhatsApp').addEventListener('click',()=>window.open(waLink(`Hi Sharif Store, I want to ask about ${p.name} — ${color}${selectedSize?` — size ${selectedSize}`:''}.`),'_blank','noopener'));
   modal.showModal();modal.classList.remove('closing');warmProduct(p);
 }
@@ -63,3 +82,9 @@ $('#checkoutBtn').addEventListener('click',()=>{if(!state.cart.length)return;con
 $('#cartBtn').addEventListener('click',openCart);$('#closeCart').addEventListener('click',closeCart);$('#backdrop').addEventListener('click',closeCart);$('#modalClose').addEventListener('click',()=>animateClose($('#productModal')));$('#productModal').addEventListener('click',e=>{if(e.target===$('#productModal'))animateClose($('#productModal'))});$('#productModal').addEventListener('cancel',e=>{e.preventDefault();animateClose($('#productModal'))});
 $('#searchBtn').addEventListener('click',()=>{$('#searchModal').showModal();lock();setTimeout(()=>$('#searchInput').focus(),30)});$('#searchClose').addEventListener('click',()=>{$('#searchModal').close();lock()});$('#searchInput').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();$('#searchResults').innerHTML=q?products.filter(p=>p.name.toLowerCase().includes(q)).map(p=>`<button class="search-result" data-id="${p.id}"><span>${safeText(p.name)}</span><b>${money(p.price)}</b></button>`).join(''):'';$$('.search-result').forEach(b=>b.addEventListener('click',()=>{$('#searchModal').close();openProduct(products.find(p=>p.id===b.dataset.id))}))});
 $$('.filter').forEach(b=>b.addEventListener('click',()=>{$$('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.filter=b.dataset.filter;renderProducts()}));$('#footerWhatsApp').href=waLink('Hi Sharif Store, I have a question.');const hero='assets/products/8f3224c1-a7fd-4da2-a00c-d56a2af76775.png';if(hero){warmImage(hero,'high');$('#heroImage').src=hero;$('#heroImage').fetchPriority='high';$('#heroImage').decoding='async';$('#heroImage').classList.add('ready')}renderProducts();renderCart();
+
+removeNetlifyBadge();
+const netlifyCleanupObserver=new MutationObserver(removeNetlifyBadge);
+netlifyCleanupObserver.observe(document.documentElement,{childList:true,subtree:true});
+setTimeout(removeNetlifyBadge,500);
+setTimeout(removeNetlifyBadge,1500);
