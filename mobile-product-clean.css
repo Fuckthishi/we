@@ -1,0 +1,36 @@
+@media (max-width:800px){
+  .product-modal{background:#f7f6f1;overflow:hidden}
+  .modal-close{top:12px;right:12px;width:40px;height:40px;border:0;background:rgba(255,255,255,.88);box-shadow:0 4px 18px rgba(0,0,0,.08);font-size:22px}
+  .modal-layout{display:block;height:100%;overflow:auto;overscroll-behavior:contain;padding-bottom:112px}
+  .gallery{display:block;background:#efeee8}
+  .main-photo{height:47dvh;min-height:330px;max-height:470px;padding:26px 18px 12px}
+  .main-photo img{max-height:100%;object-fit:contain}
+  .gallery-arrow{width:38px;height:38px;border:0;background:rgba(255,255,255,.8);box-shadow:0 3px 14px rgba(0,0,0,.07);font-size:25px}
+  .gallery-counter{bottom:12px;right:14px;background:rgba(255,255,255,.86);padding:6px 9px}
+  .thumbs{height:66px;padding:7px 12px 9px;border-top:0;gap:7px;background:#efeee8}
+  .thumb{flex:0 0 52px;width:52px;height:52px;border-radius:8px;background:#faf9f5}
+  .thumb img{height:50px}
+  .modal-details{padding:22px 18px 8px;overflow:visible}
+  .product-brand{margin:0 0 8px;font-size:10px;color:#77746d}
+  .modal-details h2{font-size:34px;line-height:1;letter-spacing:-.05em;margin:0 0 7px;max-width:90%}
+  .modal-price{font-size:15px;margin:0 0 12px;color:#56534e;font-weight:600}
+  .modal-details .desc{font-size:14px;line-height:1.45;margin:0;color:#706d67;max-width:95%}
+  .size-block{margin-top:20px}
+  .size-label{gap:10px;margin-bottom:9px}
+  .size-label .eyebrow{font-size:10px;letter-spacing:.12em}
+  .size-label span{font-size:11px}
+  .size-grid{gap:7px;margin:0}
+  .size-btn{height:42px;min-width:46px;border-radius:10px;background:#fff;border-color:#d9d6cf;font-size:13px;padding:0 12px}
+  .color-grid .size-btn{flex:0 1 auto;min-width:auto;padding:0 14px}
+  .size-btn.active{background:#111;color:#fff;border-color:#111}
+  .modal-actions{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,246,241,.96);backdrop-filter:blur(14px);border-top:1px solid rgba(0,0,0,.08)}
+  .modal-actions .primary-btn,.modal-actions .secondary-btn{height:52px;padding:0 17px;border-radius:12px;gap:10px;font-size:14px}
+  .modal-actions .primary-btn{min-width:0}
+  .modal-actions .secondary-btn{width:52px;padding:0;font-size:0;display:grid;place-items:center;background:#e8e6df}
+  .modal-actions .secondary-btn span{font-size:20px;color:#111}
+}
+@media (max-width:430px){
+  .main-photo{height:43dvh;min-height:305px}
+  .modal-details h2{font-size:31px}
+  .modal-details{padding-left:16px;padding-right:16px}
+}
