@@ -1,1 +1,1 @@
-window.WHITE_GALLERY=["assets/products/white-variant/IMG_0427.jpg","assets/products/white-variant/IMG_0428.jpg","assets/products/white-variant/IMG_0430.png","assets/products/white-variant/IMG_0432.png","assets/products/white-variant/IMG_0433.png"];
+window.WHITE_GALLERY=["assets/products/fast/white-variant/IMG_0427.webp","assets/products/fast/white-variant/IMG_0428.webp","assets/products/fast/white-variant/IMG_0430.webp","assets/products/fast/white-variant/IMG_0432.webp","assets/products/fast/white-variant/IMG_0433.webp"];
