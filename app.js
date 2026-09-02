@@ -10,15 +10,7 @@ function removeNetlifyBadge(){
   });
 }
 
-const fallback530={
-  'Black / White':['assets/products/IMG_0441.jpg','assets/products/IMG_0447.png','assets/products/IMG_0448.png','assets/products/IMG_0450.png','assets/products/IMG_0451.png'],
-  'White':Array.isArray(window.WHITE_GALLERY)&&window.WHITE_GALLERY.length?window.WHITE_GALLERY:['assets/products/IMG_0452.png','assets/products/IMG_0453.png']
-};
-const aero=window.AIR_GALLERIES||{};
-const products=[
-  {id:'nb-530',name:'New Balance 530',brand:'New Balance',price:0,new_drop:true,sizes:['37','38','39','40','41'],description:'Chunky everyday sneaker with a breathable upper. Choose your color and size.',variants:fallback530},
-  {id:'nb-aero-runner',name:'New Balance Aero Runner',brand:'New Balance',price:0,new_drop:true,sizes:['37','38','39','40','41'],description:'A sculpted performance-inspired runner with a cushioned statement sole and layered mesh upper.',variants:{'Black / White':aero['Black / White']||[],'Blue / White':aero['Blue / White']||[],'White / Black':aero['White / Black']||[]}}
-];
+const products=Array.isArray(window.PRODUCTS_DATA)?window.PRODUCTS_DATA:[];
 
 function usableVariants(p){return Object.fromEntries(Object.entries(p.variants||{}).filter(([,v])=>Array.isArray(v)&&v.length))}
 function firstImage(p){return Object.values(usableVariants(p))[0]?.[0]||''}

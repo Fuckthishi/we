@@ -1,0 +1,9 @@
+{
+  "title": "Type Product Title Here",
+  "brand": "Brand Name",
+  "price": 0,
+  "description": "Type the product description here.",
+  "sizes": [37, 38, 39, 40, 41],
+  "newDrop": true,
+  "order": 100
+}

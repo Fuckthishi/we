@@ -1,0 +1,14 @@
+{
+  "title": "New Balance Aero Runner",
+  "brand": "New Balance",
+  "price": 0,
+  "description": "A sculpted performance-inspired runner with a cushioned statement sole and layered mesh upper.",
+  "sizes": [37, 38, 39, 40, 41],
+  "newDrop": true,
+  "order": 2,
+  "variants": {
+    "Black / White": "../../fast/aero-runner/black-white",
+    "Blue / White": "../../fast/aero-runner/blue-white",
+    "White / Black": "../../fast/aero-runner/white-black"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "New Balance 530",
+  "brand": "New Balance",
+  "price": 0,
+  "description": "Chunky everyday sneaker with a breathable upper. Choose your color and size.",
+  "sizes": [37, 38, 39, 40, 41],
+  "newDrop": true,
+  "order": 1,
+  "variants": {
+    "Black / White": [
+      "../../IMG_0441.jpg",
+      "../../IMG_0447.png",
+      "../../IMG_0448.png",
+      "../../IMG_0450.png",
+      "../../IMG_0451.png"
+    ],
+    "White": "../../fast/white-variant"
+  }
+}
