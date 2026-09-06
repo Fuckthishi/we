@@ -73,5 +73,584 @@ window.PRODUCTS_DATA=[
         "assets/products/fast/aero-runner/white-black/IMG_0469.webp"
       ]
     }
+  },
+  {
+    "id": "nb-chunky-runner",
+    "name": "New Balance Chunky Runner",
+    "brand": "New Balance",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Chunky everyday runner with a cushioned sole and layered upper.",
+    "variants": {
+      "Cream": [
+        "assets/products/IMG_0670-compresso.png",
+        "assets/products/IMG_0671-compresso.png",
+        "assets/products/IMG_0672-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "retro-mesh-runner",
+    "name": "Retro Mesh Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Retro-inspired mesh sneaker with soft neutral tones and everyday cushioning.",
+    "variants": {
+      "Beige / Pink": [
+        "assets/products/IMG_0682-compresso.png",
+        "assets/products/IMG_0683-compresso.png",
+        "assets/products/IMG_0684-compresso.png",
+        "assets/products/IMG_0685-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "classic-low-sneaker",
+    "name": "Classic Low Sneaker",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Clean low-profile sneaker designed for versatile everyday wear.",
+    "variants": {
+      "Beige": [
+        "assets/products/IMG_0686-compresso.png",
+        "assets/products/IMG_0687-compresso.png",
+        "assets/products/IMG_0688-compresso.png",
+        "assets/products/IMG_0689-compresso.png"
+      ],
+      "Black": [
+        "assets/products/IMG_0690-compresso.png",
+        "assets/products/IMG_0691-compresso.png",
+        "assets/products/IMG_0692-compresso.png",
+        "assets/products/IMG_0693-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "minimal-court-low",
+    "name": "Minimal Court Low",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Minimal court-style sneaker with an easy-to-match low silhouette.",
+    "variants": {
+      "Cream": [
+        "assets/products/IMG_0694-compresso.png",
+        "assets/products/IMG_0695-compresso.png",
+        "assets/products/IMG_0696-compresso.png",
+        "assets/products/IMG_0697-compresso.png",
+        "assets/products/IMG_0699-compresso.png",
+        "assets/products/IMG_0700-compresso.png"
+      ],
+      "Black": [
+        "assets/products/IMG_0702-compresso.png",
+        "assets/products/IMG_0703-compresso.png",
+        "assets/products/IMG_0704 (Edit with AI)-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "retro-air-runner",
+    "name": "Retro Air Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Sport-inspired runner with a bold cushioned sole and layered upper.",
+    "variants": {
+      "Rose": [
+        "assets/products/IMG_0706-compresso.png",
+        "assets/products/IMG_0707-compresso.png",
+        "assets/products/IMG_0708-compresso.png"
+      ],
+      "Silver / White": [
+        "assets/products/IMG_0709 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0710-compresso.png",
+        "assets/products/IMG_0711-compresso.png"
+      ],
+      "Black": [
+        "assets/products/IMG_0712-compresso.png",
+        "assets/products/IMG_0713-compresso.png",
+        "assets/products/IMG_0714-compresso.png",
+        "assets/products/IMG_0715-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "air-force-style-low",
+    "name": "Air Force Style Low",
+    "brand": "Nike",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Classic court-inspired low sneaker with a clean everyday profile.",
+    "variants": {
+      "Black / White": [
+        "assets/products/IMG_0718-compresso.png",
+        "assets/products/IMG_0719-compresso.png"
+      ],
+      "White": [
+        "assets/products/IMG_0720-compresso.png",
+        "assets/products/IMG_0721-compresso.png"
+      ],
+      "Black Special": [
+        "assets/products/IMG_0724-compresso.png",
+        "assets/products/IMG_0726-compresso.png",
+        "assets/products/IMG_0727-compresso.png",
+        "assets/products/IMG_0728-compresso.png",
+        "assets/products/IMG_0729-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "charm-chunky-sneaker",
+    "name": "Charm Chunky Sneaker",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Chunky statement sneaker finished with playful charm details.",
+    "variants": {
+      "Mint / Yellow Charm": [
+        "assets/products/IMG_0730-compresso.png",
+        "assets/products/IMG_0731-compresso.png",
+        "assets/products/IMG_0732-compresso.png",
+        "assets/products/IMG_0733-compresso.png",
+        "assets/products/IMG_0734-compresso.png",
+        "assets/products/IMG_0735-compresso.png",
+        "assets/products/IMG_0736-compresso.png",
+        "assets/products/IMG_0737-compresso.png",
+        "assets/products/IMG_0738-compresso.png",
+        "assets/products/IMG_0739-compresso.png",
+        "assets/products/IMG_0740-compresso.png",
+        "assets/products/IMG_0741-compresso.png",
+        "assets/products/IMG_0742-compresso.png",
+        "assets/products/IMG_0743-compresso.png",
+        "assets/products/IMG_0744-compresso.png"
+      ],
+      "Pink Charm": [
+        "assets/products/IMG_0745-compresso.png",
+        "assets/products/IMG_0746-compresso.png",
+        "assets/products/IMG_0747-compresso.png",
+        "assets/products/IMG_0748-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "chunky-trail-runner",
+    "name": "Chunky Trail Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Layered chunky runner with an outdoor-inspired silhouette and cushioned sole.",
+    "variants": {
+      "Black / Cream": [
+        "assets/products/IMG_0749-compresso.png",
+        "assets/products/IMG_0750 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0751-compresso.png",
+        "assets/products/IMG_0752-compresso.png",
+        "assets/products/IMG_0753-compresso.png",
+        "assets/products/IMG_0754-compresso.png"
+      ],
+      "Cream / Gray": [
+        "assets/products/IMG_0755-compresso.png",
+        "assets/products/IMG_0756-compresso.png",
+        "assets/products/IMG_0757-compresso.png",
+        "assets/products/IMG_0758-compresso.png",
+        "assets/products/IMG_0759-compresso.png",
+        "assets/products/IMG_0760-compresso.png",
+        "assets/products/IMG_0761-compresso.png"
+      ],
+      "Collection": [
+        "assets/products/IMG_0762-compresso.png",
+        "assets/products/IMG_0763-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "retro-designer-runner",
+    "name": "Retro Designer Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Retro luxury-inspired runner with layered panels and a sporty sole.",
+    "variants": {
+      "Brown": [
+        "assets/products/IMG_0768 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0769 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0770 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0771-compresso.png"
+      ],
+      "Black / White": [
+        "assets/products/IMG_0772-compresso.png",
+        "assets/products/IMG_0773-compresso.png",
+        "assets/products/IMG_0774 (Edit with AI)-compresso.jpg"
+      ],
+      "Black": [
+        "assets/products/IMG_0775-compresso.png",
+        "assets/products/IMG_0776-compresso.png",
+        "assets/products/IMG_0777 (Edit with AI)-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "designer-court-low",
+    "name": "Designer Court Low",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Clean designer-inspired court sneaker in a soft neutral finish.",
+    "variants": {
+      "White / Beige": [
+        "assets/products/IMG_0778-compresso.png",
+        "assets/products/IMG_0779-compresso.png",
+        "assets/products/IMG_0780 (Edit with AI)-compresso.jpg"
+      ]
+    }
+  },
+  {
+    "id": "tn-style-runner",
+    "name": "TN Style Runner",
+    "brand": "Nike",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Streamlined performance-inspired runner with multiple standout colorways.",
+    "variants": {
+      "Silver": [
+        "assets/products/IMG_0781-compresso.png",
+        "assets/products/IMG_0782 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0783-compresso.png"
+      ],
+      "White / Pink": [
+        "assets/products/IMG_0784-compresso.png",
+        "assets/products/IMG_0785-compresso.png"
+      ],
+      "Navy": [
+        "assets/products/IMG_0786-compresso.png",
+        "assets/products/IMG_0787 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0788-compresso.png"
+      ],
+      "Purple": [
+        "assets/products/IMG_0789 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0790 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0791-compresso.png"
+      ],
+      "Gray / Pink": [
+        "assets/products/IMG_0792-compresso.png",
+        "assets/products/IMG_0793-compresso.png",
+        "assets/products/IMG_0794-compresso.png"
+      ],
+      "Black / Silver": [
+        "assets/products/IMG_0795-compresso.png",
+        "assets/products/IMG_0796 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0797-compresso.png"
+      ],
+      "Pink / Mint": [
+        "assets/products/IMG_0798-compresso.png",
+        "assets/products/IMG_0799-compresso.png",
+        "assets/products/IMG_0800-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "logo-platform-court",
+    "name": "Logo Platform Court",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Platform court sneaker with a clean upper and elevated sole.",
+    "variants": {
+      "White": [
+        "assets/products/IMG_0801 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0801-compresso.png",
+        "assets/products/IMG_0802 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0803 (Edit with AI)-compresso.jpg"
+      ],
+      "Black": [
+        "assets/products/IMG_0804-compresso.png",
+        "assets/products/IMG_0805-compresso.png",
+        "assets/products/IMG_0806-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "platform-runner",
+    "name": "Platform Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Chunky platform runner with a sporty upper and cushioned everyday build.",
+    "variants": {
+      "Beige": [
+        "assets/products/IMG_0807-compresso.png",
+        "assets/products/IMG_0808-compresso.png",
+        "assets/products/IMG_0809 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0810-compresso.png"
+      ],
+      "Black": [
+        "assets/products/IMG_0811 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0812-compresso.png",
+        "assets/products/IMG_0813-compresso.png"
+      ],
+      "White": [
+        "assets/products/IMG_0814-compresso.png",
+        "assets/products/IMG_0815-compresso.png",
+        "assets/products/IMG_0816-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "white-chunky-runner",
+    "name": "White Chunky Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Clean all-white chunky runner with a versatile everyday look.",
+    "variants": {
+      "White": [
+        "assets/products/IMG_0817-compresso.png",
+        "assets/products/IMG_0818 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0818-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "everyday-sport-runner",
+    "name": "Everyday Sport Runner",
+    "brand": "Sharif Store",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Light everyday sport sneaker built for easy casual wear.",
+    "variants": {
+      "White": [
+        "assets/products/IMG_0819-compresso.png"
+      ],
+      "Black": [
+        "assets/products/IMG_0820 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0821-compresso.png",
+        "assets/products/IMG_0822-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "af1-type-collection",
+    "name": "AF1 Type Collection",
+    "brand": "Nike",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Classic low court collection with clean and custom-style colorways.",
+    "variants": {
+      "Plain White": [
+        "assets/products/IMG_0823-compresso.png",
+        "assets/products/IMG_0827-compresso.png"
+      ],
+      "Black / Custom": [
+        "assets/products/IMG_0828-compresso.png",
+        "assets/products/IMG_0830-compresso.png",
+        "assets/products/IMG_0831-compresso.png"
+      ],
+      "White / Custom": [
+        "assets/products/IMG_0832 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0833 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0834-compresso.png",
+        "assets/products/IMG_0835 (Edit with AI)-compresso.jpg"
+      ]
+    }
+  },
+  {
+    "id": "samba-terrace-collection",
+    "name": "Samba Terrace Collection",
+    "brand": "Adidas",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Low-profile terrace sneaker collection with gum-sole inspired styling.",
+    "variants": {
+      "Cream / Gum": [
+        "assets/products/IMG_0837-compresso.png",
+        "assets/products/IMG_0838-compresso.png",
+        "assets/products/IMG_0839 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0840-compresso.png"
+      ],
+      "Black Stripes": [
+        "assets/products/IMG_0856 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0857 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0858-compresso.png"
+      ],
+      "Tonal White": [
+        "assets/products/IMG_0859 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0860 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0861-compresso.png"
+      ],
+      "Light Blue Stripes": [
+        "assets/products/IMG_0862 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0863 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0864-compresso.png"
+      ],
+      "Burgundy Stripes": [
+        "assets/products/IMG_0865-compresso.png",
+        "assets/products/IMG_0866-compresso.png",
+        "assets/products/IMG_0867-compresso.png"
+      ],
+      "Cream Stripes": [
+        "assets/products/IMG_0868 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0869 (Edit with AI)-compresso.png",
+        "assets/products/IMG_0870-compresso.png"
+      ]
+    }
+  },
+  {
+    "id": "court-af-low-collection",
+    "name": "Court AF Low Collection",
+    "brand": "Nike",
+    "price": 0,
+    "new_drop": true,
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Classic court low collection offered in versatile contrast colorways.",
+    "variants": {
+      "Blue / White": [
+        "assets/products/IMG_0841 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0842-compresso.png",
+        "assets/products/IMG_0844 (Edit with AI)-compresso.jpg"
+      ],
+      "Black": [
+        "assets/products/IMG_0845 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0846 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0847-compresso.png"
+      ],
+      "Gray / White": [
+        "assets/products/IMG_0848 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0849 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0850-compresso.png"
+      ],
+      "White / Black": [
+        "assets/products/IMG_0851 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0853 (Edit with AI)-compresso.jpg",
+        "assets/products/IMG_0854-compresso.png",
+        "assets/products/IMG_0855-compresso.png"
+      ]
+    }
   }
 ];
