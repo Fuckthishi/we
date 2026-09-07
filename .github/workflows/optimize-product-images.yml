@@ -3,6 +3,14 @@ name: Optimize product images
 on:
   push:
     branches: [main]
+    paths:
+      - 'assets/products/white-variant/**'
+      - 'assets/products/aero-runner/**'
+      - 'assets/products/IMG_0441.jpg'
+      - 'assets/products/IMG_0447.png'
+      - 'assets/products/IMG_0448.png'
+      - 'assets/products/IMG_0450.png'
+      - 'assets/products/IMG_0451.png'
   workflow_dispatch:
 
 permissions:
